@@ -18,12 +18,13 @@
 }
 
 
+
 /* Client Login Box */
 
 .client{
     border-radius:7px;
     width:350px;
-    height:210px;
+    height:220px;
     border: 2px solid #ddd;
     background: #c8c9ca7d;
     padding:10px;
@@ -35,6 +36,7 @@
     border-radius: 5px;
     background-color: white;
     border: 0px;
+    height:30px;
 }
 
 
@@ -43,6 +45,7 @@
     border-radius: 5px;
     background-color: white;
     border:0px;
+    height:30px;
     
 }
 
@@ -51,7 +54,7 @@
 .mod-auth{
     border-radius: 7px;
     width:350px;
-    height:210px;
+    height:220px;
     border: 2px solid #ddd;
     background: #c8c9ca7d;
     padding: 10px;
@@ -62,6 +65,7 @@
     border-radius: 5px;
     background-color: white;
     border: 0px;
+    height:30px;
 
 }
 
@@ -69,5 +73,6 @@
     border-radius: 5px;
     background-color: white;
     border: 0px;
+    height:30px;
     
 }
