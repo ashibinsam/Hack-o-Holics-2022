@@ -1,0 +1,72 @@
+
+
+.login{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    width: auto;
+    height:720px;
+    flex-wrap: wrap;
+    
+}
+
+::placeholder{
+    color:black;
+}
+
+
+/* Client Login Box */
+
+.client{
+    border-radius:7px;
+    width:350px;
+    height:210px;
+    border: 2px solid #ddd;
+    background: #c8c9ca7d;
+    padding:10px;
+}
+
+
+
+.email{
+    border-radius: 5px;
+    background-color: white;
+    border: 0px;
+}
+
+
+
+.password-client{
+    border-radius: 5px;
+    background-color: white;
+    border:0px;
+    
+}
+
+/* Moderator login Box */
+
+.mod-auth{
+    border-radius: 7px;
+    width:350px;
+    height:210px;
+    border: 2px solid #ddd;
+    background: #c8c9ca7d;
+    padding: 10px;
+
+}
+
+.id-mod{
+    border-radius: 5px;
+    background-color: white;
+    border: 0px;
+
+}
+
+.password-mod{
+    border-radius: 5px;
+    background-color: white;
+    border: 0px;
+    
+}
