@@ -88,8 +88,8 @@
 }
 .road-type{
     width:400px;
-    height:200px;
-    background-color: aquamarine;
+    height:800px;
+    background-color: blueviolet !important;
     border-radius: 10px;
     padding-top:30px;
     
