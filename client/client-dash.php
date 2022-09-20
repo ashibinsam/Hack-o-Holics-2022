@@ -14,7 +14,7 @@ include '../libs/load.php';
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,18 +28,20 @@ include '../libs/load.php';
     }
 
 
-?>
+  ?>
 	<div class="c-dash">
 		<div style="text-align:center" class="road-type">
-			<h2>Select the type of road</h2>
+			<h2 id="heading-text">Select the type of road</h2>
 			<form method="post" action="">
 				<select name="roads" id="roads">
 					<option value="stateHighway">State Highway</option>
 					<option value="district">District Roads</option>
 					<option value="villageRoad">Village Roads</option>
 				</select>
-        <!-- state highway -->
         <br><br>
+
+        <!-- state highway -->
+        
         <div id="stateHighway">
           <select id="exp" name="exp" >
             <option value="1">SH1</option>
@@ -48,26 +50,30 @@ include '../libs/load.php';
             <option value="4">SH4</option>
           </select>
         </div>
-        <br><br>
+        <br>
+
         <!-- District -->
+
         <div id="district">
           <select id="team" name="team">
-            <option value="1">Rangers</option>
-            <option value="2">Blazers</option>
-            <option value="3">Mystics</option>
-            <option value="4">United</option>
-            <option value="5">Power</option>
-            <option value="6">Kings</option>
+            <option value="1">DR1</option>
+            <option value="2">DR</option>
+            <option value="3">DR3</option>
+            <option value="4">DR4</option>
+            <option value="5">DR5</option>
+            <option value="6">DR6</option>
           </select>
         </div>
-        <br><br>
+        <br>
+
         <!-- Village Road -->
+
         <div id="villageRoad">
           <select id="age" name="age">
-            <option value="1">18-20</option>
-            <option value="2">20-25</option>
-            <option value="3">25-28</option>
-            <option value="4">28+</option>
+            <option value="1">VR1</option>
+            <option value="2">VR2</option>
+            <option value="3">VR3</option>
+            <option value="4">VR4</option>
           </select>
         </div>
         <br>
@@ -76,5 +82,6 @@ include '../libs/load.php';
 		</div>
 	</div>
 </body>
+<script src="script.js"></script>
 
 </html>

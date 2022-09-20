@@ -19,6 +19,10 @@
 
 /* Client Login Box */
 
+#heading-text{
+    margin-bottom: 30px;
+}
+
 .client{
     border-radius:7px;
     width:350px;
@@ -88,8 +92,8 @@
 }
 .road-type{
     width:400px;
-    height:800px;
-    background-color: blueviolet !important;
+    height:380px;
+    background-color:aquamarine;
     border-radius: 10px;
     padding-top:30px;
     
