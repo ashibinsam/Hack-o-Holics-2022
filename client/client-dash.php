@@ -31,15 +31,15 @@ include '../libs/load.php';
   ?>
 	<div class="c-dash">
 		<div style="text-align:center" class="road-type">
-			<h2 id="heading-text">Select the type of road</h2>
+			<h2 id="heading-text">Select the type of Road</h2>
 			<form method="post" action="">
-				<select name="roads" id="roads">
+				<select name="roads" id="roads" required>
+        <option value="">None</option>
 					<option value="stateHighway">State Highway</option>
 					<option value="district">District Roads</option>
 					<option value="villageRoad">Village Roads</option>
 				</select>
-        <br><br>
-
+        <br>
         <!-- state highway -->
         
         <div id="stateHighway">
@@ -50,7 +50,7 @@ include '../libs/load.php';
             <option value="4">SH4</option>
           </select>
         </div>
-        <br>
+        
 
         <!-- District -->
 
@@ -64,7 +64,7 @@ include '../libs/load.php';
             <option value="6">DR6</option>
           </select>
         </div>
-        <br>
+        
 
         <!-- Village Road -->
 
@@ -76,7 +76,8 @@ include '../libs/load.php';
             <option value="4">VR4</option>
           </select>
         </div>
-        <br>
+        
+        <input type="number" id="damage" placeholder="Damage Depth in feet" required /><br><br>
 				<input type="submit" class="btn btn-primary">
 			</form>
 		</div>
