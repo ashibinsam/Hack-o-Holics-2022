@@ -39,6 +39,40 @@ include '../libs/load.php';
 					<option value="villageRoad">Village Roads</option>
 				</select>
 				<br>
+				<div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div id="stateHighway">
+                      <select id="exp" name="exp" class="form-control">
+                        <option value="1">1 Year</option>
+                        <option value="2">2-3 Years</option>
+                        <option value="3">3-5 Years</option>
+                        <option value="4">6+ Years</option>
+                      </select>
+                    </div>
+                    <div id="district">
+                      <select id="team" name="team" class="form-control">
+                        <option value="1">Rangers</option>
+                        <option value="2">Blazers</option>
+                        <option value="3">Mystics</option>
+                        <option value="4">United</option>
+                        <option value="5">Power</option>
+                        <option value="6">Kings</option>
+                      </select>
+                    </div>
+                    <div id="villageRoad">
+                      <select id="age" name="age" class="form-control">
+                        <option value="1">18-20</option>
+                        <option value="2">20-25</option>
+                        <option value="3">25-28</option>
+                        <option value="4">28+</option>
+                      </select>
+                    </div>
+                    <div id="surname">
+                      <input type='text' class='form-control' id='surname' maxlength='1' minlength='1' value='H'>
+                    </div>
+                  </div>
+                </div>
 				<br>
 				<input type="submit" class="btn btn-primary">
 			</form>
