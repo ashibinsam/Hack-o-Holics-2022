@@ -2,6 +2,11 @@
 
 include '../libs/load.php';
 
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$result = User::login($username, $password);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,74 +19,81 @@ include '../libs/load.php';
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+
 	<?php
-    
-    if (Database::getConnection()) {
-        echo "done";
-    } else {
-        echo "something wrong";
-    }
-
-
-  ?>
+if ($result) {
+    ?>
 	<div class="c-dash">
 		<div style="text-align:center" class="road-type">
 			<h2 id="heading-text">Select the type of Road</h2>
-			<form method="post" action="">
+			<form method="post" action="roadData.php">
 				<select name="roads" id="roads" required>
-        <option value="">None</option>
+					<option value="">None</option>
 					<option value="stateHighway">State Highway</option>
 					<option value="district">District Roads</option>
 					<option value="villageRoad">Village Roads</option>
 				</select>
-        <br>
-        <!-- state highway -->
-        
-        <div id="stateHighway">
-          <select id="exp" name="exp" >
-            <option value="1">SH1</option>
-            <option value="2">SH2</option>
-            <option value="3">SH3</option>
-            <option value="4">SH4</option>
-          </select>
-        </div>
-        
+				<br>
+				<!-- state highway -->
 
-        <!-- District -->
+				<div id="stateHighway">
+					<select id="exp" name="exp">
+						<option value="1">SH1</option>
+						<option value="2">SH2</option>
+						<option value="3">SH3</option>
+						<option value="4">SH4</option>
+					</select>
+				</div>
 
-        <div id="district">
-          <select id="team" name="team">
-            <option value="1">DR1</option>
-            <option value="2">DR</option>
-            <option value="3">DR3</option>
-            <option value="4">DR4</option>
-            <option value="5">DR5</option>
-            <option value="6">DR6</option>
-          </select>
-        </div>
-        
 
-        <!-- Village Road -->
+				<!-- District -->
 
-        <div id="villageRoad">
-          <select id="age" name="age">
-            <option value="1">VR1</option>
-            <option value="2">VR2</option>
-            <option value="3">VR3</option>
-            <option value="4">VR4</option>
-          </select>
-        </div>
-        
-        <input type="number" id="damage" placeholder="Damage Depth in feet" required /><br><br>
+				<div id="district">
+					<select id="team" name="team">
+						<option value="1">DR1</option>
+						<option value="2">DR</option>
+						<option value="3">DR3</option>
+						<option value="4">DR4</option>
+						<option value="5">DR5</option>
+						<option value="6">DR6</option>
+					</select>
+				</div>
+
+
+				<!-- Village Road -->
+
+				<div id="villageRoad">
+					<select id="age" name="age">
+						<option value="1">VR1</option>
+						<option value="2">VR2</option>
+						<option value="3">VR3</option>
+						<option value="4">VR4</option>
+					</select>
+				</div>
+
+				<input type="number" name="damageDepth" id="damage" placeholder="Damage Depth in feet" required />
+				<br>
+				<br>
 				<input type="submit" class="btn btn-primary">
 			</form>
 		</div>
 	</div>
+	<?php
+} else {
+    ?>
+
+	<h1>Login Failed</h1>
+
+	<?php
+}
+?>
+
+
 </body>
 <script src="script.js"></script>
 
