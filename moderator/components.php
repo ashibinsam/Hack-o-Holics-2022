@@ -140,24 +140,28 @@
               <p class="text-sm text-gray-500 fw-light mb-0 lh-1">Web Designer</p>
             </div>
           </div>
-          <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
-          <ul class="list-unstyled py-4">
-            <li class="sidebar-item"><a class="sidebar-link" href="index.html"> 
+         <!-- Sidebar Navidation Menus--><span class="text-uppercase text-gray-400 text-xs letter-spacing-0 mx-3 px-2 heading">Main</span>
+         <ul class="list-unstyled py-4">
+            <li class="sidebar-item active"><a class="sidebar-link" href="index.html"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#real-estate-1"> </use>
                 </svg>Home </a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="tables.html"> 
+            <li class="sidebar-item"><a class="sidebar-link" href="stateHighway.php"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#portfolio-grid-1"> </use>
-                </svg>Tables </a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts.html"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#sales-up-1"> </use>
-                </svg>Charts </a></li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="forms.html"> 
-                <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-                  <use xlink:href="#survey-1"> </use>
-                </svg>Forms </a></li>
+                </svg>State Highway </a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="districtHighway.php"> 
+                  <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+                    <use xlink:href="#portfolio-grid-1"> </use>
+                  </svg>District Highway</a></li>
+                  <li class="sidebar-item"><a class="sidebar-link" href="villageRoad.php"> 
+                    <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+                      <use xlink:href="#portfolio-grid-1"> </use>
+                    </svg>Village Road</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="components.php"> 
+                  <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+                    <use xlink:href="#survey-1"> </use>
+                  </svg>Components </a></li>
             <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
                   <use xlink:href="#browser-window-1"> </use>
@@ -196,7 +200,7 @@
           <!-- Page Header-->
           <header class="bg-white shadow-sm px-4 py-3 z-index-20">
             <div class="container-fluid px-0">
-              <h2 class="mb-0 p-1">Forms</h2>
+              <h2 class="mb-0 p-1">Product Price</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
@@ -205,7 +209,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 py-3">
                   <li class="breadcrumb-item"><a class="fw-light" href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active fw-light" aria-current="page">Forms</li>
+                  <li class="breadcrumb-item active fw-light" aria-current="page">Product Price</li>
                 </ol>
               </nav>
             </div>
@@ -214,7 +218,7 @@
           <section class="forms"> 
             <div class="container-fluid">
               <div class="row">
-                <!-- Basic Form-->
+                <!-- PRICE Form-->
                 <div class="col-lg-6">
                   <div class="card">
                     <div class="card-header">
@@ -224,21 +228,33 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Basic Form</h3>
+                      <h3 class="h4 mb-0">Concerate Road</h3>
                     </div>
                     <div class="card-body">
-                      <p class="text-sm">Lorem ipsum dolor sit amet consectetur.</p>
+                      <p class="text-sm">Upadate to the latest price for best estimation</p>
                       <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="exampleInputEmail1">Email address</label>
-                          <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp">
-                          <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
+                        <label class="form-label" for="exampleInputPassword1">Cement Price per Kg</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="exampleInputPassword1">Password</label>
-                          <input class="form-control" id="exampleInputPassword1" type="password">
+
+                        <label class="form-label" for="exampleInputPassword1">Mcent Price per Kg</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit</button>
+
+                        <label class="form-label" for="exampleInputPassword1">Agrigator Price per Kg</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+                        <label class="form-label" for="exampleInputPassword1">Labour Charge per person</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+
+                        <button class="btn btn-primary" type="submit">Upadte Price</button>
                       </form>
                     </div>
                   </div>
@@ -253,26 +269,34 @@
                           <div class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="closeCard1"><a class="dropdown-item py-1 px-3 remove" href="#"> <i class="fas fa-times"></i>Close</a><a class="dropdown-item py-1 px-3 edit" href="#"> <i class="fas fa-cog"></i>Edit</a></div>
                         </div>
                       </div>
-                      <h3 class="h4 mb-0">Horizontal Form</h3>
+                      <h3 class="h4 mb-0">Tor Road</h3>
                     </div>
                     <div class="card-body">
-                      <p class="text-sm">Lorem ipsum dolor sit amet consectetur.</p>
+                      <p class="text-sm">Upadate to the latest price for best estimation</p>
                       <form class="form-horizontal">
-                        <div class="row gy-2 mb-4">
-                          <label class="col-sm-3 form-label" for="inputHorizontalElOne">Email</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" id="inputHorizontalElOne" type="email" placeholder="Email Address"><small class="form-text">Example help text that remains unchanged.</small>
-                          </div>
+
+                      <label class="form-label" for="exampleInputPassword1">Agrigator Price</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                        <div class="row gy-2 mb-4">
-                          <label class="col-sm-3 form-label" for="inputHorizontalElTwo">Password</label>
-                          <div class="col-sm-9">
-                            <input class="form-control" id="inputHorizontalElTwo" type="password" placeholder="Pasword"><small class="form-text">Example help text that remains unchanged.</small>
-                          </div>
+
+                        <label class="form-label" for="exampleInputPassword1">Bitumin Price</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+                        <label class="form-label" for="exampleInputPassword1">Laying Charge</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+                        
+                        <label class="form-label" for="exampleInputPassword1">Mixing Charge</label>
+                        <div class="input-group mb-3"><span class="input-group-text">₹</span><span class="input-group-text">0.00</span>
+                              <input class="form-control" type="text" aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
                         <div class="row">
                           <div class="col-sm-9 ms-auto">
-                            <input class="btn btn-primary" type="submit" value="Signin">
+                            <input class="btn btn-primary" type="submit" value="Update Price">
                           </div>
                         </div>
                       </form>
