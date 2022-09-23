@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 19, 2022 at 07:22 PM
+-- Host: 127.0.0.1
+-- Generation Time: Sep 23, 2022 at 05:19 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `RoadCare`
+-- Database: `roadcare`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clientAuth`
+-- Table structure for table `clientauth`
 --
 
-CREATE TABLE `clientAuth` (
+CREATE TABLE `clientauth` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -35,30 +35,30 @@ CREATE TABLE `clientAuth` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `clientAuth`
+-- Dumping data for table `clientauth`
 --
 
-INSERT INTO `clientAuth` (`id`, `username`, `email`, `password`) VALUES
+INSERT INTO `clientauth` (`id`, `username`, `email`, `password`) VALUES
 (1, 'user', 'user@example.com', 'user'),
 (2, 'user2', 'user2@example.com', 'user2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `districtRoads`
+-- Table structure for table `districtroads`
 --
 
-CREATE TABLE `districtRoads` (
+CREATE TABLE `districtroads` (
   `roadName` varchar(50) NOT NULL,
   `roadLengthInKM` float NOT NULL,
   `roadWidth` float NOT NULL DEFAULT 12
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `districtRoads`
+-- Dumping data for table `districtroads`
 --
 
-INSERT INTO `districtRoads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
+INSERT INTO `districtroads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
 ('district road 1', 50, 12),
 ('district road 2', 30, 12),
 ('district road 3', 60, 12),
@@ -68,38 +68,61 @@ INSERT INTO `districtRoads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `moderatorLogin`
+-- Table structure for table `materialprice`
 --
 
-CREATE TABLE `moderatorLogin` (
+CREATE TABLE `materialprice` (
+  `cement` int(11) NOT NULL,
+  `mcent` int(11) NOT NULL,
+  `agrigator` int(11) NOT NULL,
+  `labourcharge` int(11) NOT NULL,
+  `bitumin` int(11) NOT NULL,
+  `laying` int(11) NOT NULL,
+  `mixing` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `materialprice`
+--
+
+INSERT INTO `materialprice` (`cement`, `mcent`, `agrigator`, `labourcharge`, `bitumin`, `laying`, `mixing`) VALUES
+(10, 5000, 5000, 800, 5000, 5000, 800);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `moderatorlogin`
+--
+
+CREATE TABLE `moderatorlogin` (
   `moderatorId` int(255) NOT NULL,
   `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `moderatorLogin`
+-- Dumping data for table `moderatorlogin`
 --
 
-INSERT INTO `moderatorLogin` (`moderatorId`, `password`) VALUES
+INSERT INTO `moderatorlogin` (`moderatorId`, `password`) VALUES
 (100, '100');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stateHighway`
+-- Table structure for table `statehighway`
 --
 
-CREATE TABLE `stateHighway` (
+CREATE TABLE `statehighway` (
   `stateRoad` varchar(30) NOT NULL,
   `lengthInKM` float NOT NULL,
   `roadWidthInMeter` float NOT NULL DEFAULT 12
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `stateHighway`
+-- Dumping data for table `statehighway`
 --
 
-INSERT INTO `stateHighway` (`stateRoad`, `lengthInKM`, `roadWidthInMeter`) VALUES
+INSERT INTO `statehighway` (`stateRoad`, `lengthInKM`, `roadWidthInMeter`) VALUES
 ('state road 1', 50, 12),
 ('state road 2', 150, 12),
 ('state road 1', 50, 12),
@@ -110,20 +133,20 @@ INSERT INTO `stateHighway` (`stateRoad`, `lengthInKM`, `roadWidthInMeter`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `villageRoads`
+-- Table structure for table `villageroads`
 --
 
-CREATE TABLE `villageRoads` (
+CREATE TABLE `villageroads` (
   `roadName` varchar(255) NOT NULL,
   `roadLengthInKM` float NOT NULL,
   `roadWidth` float NOT NULL DEFAULT 3.75
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `villageRoads`
+-- Dumping data for table `villageroads`
 --
 
-INSERT INTO `villageRoads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
+INSERT INTO `villageroads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
 ('village road 1', 2, 3.75),
 ('village road 2', 3, 3.75),
 ('village road 3', 1, 3.75),
@@ -135,17 +158,17 @@ INSERT INTO `villageRoads` (`roadName`, `roadLengthInKM`, `roadWidth`) VALUES
 --
 
 --
--- Indexes for table `clientAuth`
+-- Indexes for table `clientauth`
 --
-ALTER TABLE `clientAuth`
+ALTER TABLE `clientauth`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `moderatorLogin`
+-- Indexes for table `moderatorlogin`
 --
-ALTER TABLE `moderatorLogin`
+ALTER TABLE `moderatorlogin`
   ADD PRIMARY KEY (`moderatorId`);
 
 --
@@ -153,9 +176,9 @@ ALTER TABLE `moderatorLogin`
 --
 
 --
--- AUTO_INCREMENT for table `clientAuth`
+-- AUTO_INCREMENT for table `clientauth`
 --
-ALTER TABLE `clientAuth`
+ALTER TABLE `clientauth`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
